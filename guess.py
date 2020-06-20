@@ -1,8 +1,7 @@
 # This is a guess the number game
+# Plans: allow choosing the range, make out of range exception, make game a function and infinite loop "would you like to play again or quit(sys.exit())", have game bully you if you input several invalid guesses(error counter, maybe even punish you/increment guessesTaken)
+
 import random
-
-
-
 
 
 if __name__ == "__main__":
@@ -17,6 +16,8 @@ if __name__ == "__main__":
         print('Take a guess.')
         try:
             guess = int(input())
+            if guess < 1 or guess > 20:
+                raise ValueError    # I plan to make this a custom exception "Out of Range"
         except ValueError:
             print('Error: You did not enter a valid number.')
             continue
