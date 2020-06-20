@@ -18,7 +18,7 @@ if __name__ == "__main__":
         try:
             guess = int(input())
         except ValueError:
-            print('Error: You did not enter a number.')
+            print('Error: You did not enter a valid number.')
             continue
         guessesTaken += 1
         if guess < secretNumber:
