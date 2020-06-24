@@ -1,5 +1,6 @@
+#! /usr/bin/python3
 # This is a guess the number game - You can change the range and max guesses allowed
-# Plans: Test this from shell execution
+# Plans: Add error handling for termination/interrupts (while running from CDL)
 
 import random
 import sys
@@ -10,7 +11,7 @@ def intInput():
             num = int(input())
             return num
         except ValueError:
-            print('Error: You did not enter a valid number.')
+            print('Error: You did not enter a valid number. Try again.')
             continue
 
 def play(settings):
